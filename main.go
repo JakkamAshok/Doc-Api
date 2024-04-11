@@ -3,27 +3,10 @@ package main
 import (
 	"net/http"
 
-	_ "github.com/JakkamAshok/Doc-Api"
 	"github.com/gin-gonic/gin"
-	"github.com/swaggo/files"
-	"github.com/swaggo/gin-swagger"
+	// _ "github.com/JakkamAshok/Doc-Api"
 	// swaggerFiles "github.com/swaggo/files"
 	// ginSwagger "github.com/swaggo/gin-swagger"
-
-	_ "github.com/JakkamAshok/Doc-Api"
-	// swaggerFiles "github.com/swaggo/files"
-	// ginSwagger "github.com/swaggo/gin-swagger"
-	"net/http"
-
-	"github.com/gin-gonic/gin"
-	"github.com/swaggo/gin-swagger"
-	"github.com/swaggo/gin-swagger/swaggerFiles"
-	_ "github.com/swaggo/swag/example/basic/docs" // This line is necessary for go-swagger to find your docs!
-	// "github.com/gin-gonic/gin"
-	// "github.com/swaggo/gin-swagger"
-	// "github.com/swaggo/gin-swagger/swaggerFiles"
-	// "github.com/swaggo/swag/example/basic/api/basic"
-	// _ "github.com/swaggo/swag/example/basic/docs "
 )
 
 type message struct {
@@ -53,26 +36,16 @@ func addMessages(c *gin.Context) {
 	c.IndentedJSON(http.StatusCreated, newMessage)
 }
 
-// @title Swagger Example API
-// @version 1.0
-// @description This is a sample server for Swagger.
-// @host localhost:8080
-// @basePath /
-
 func main() {
-	// router := gin.Default()
-	router := gin.New()
-
-	// Middleware to serve the API documentation
-	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
-	// router.GET("/getMessages", getMessages)
-	// router.POST("/addMessage", addMessages)
-	user := router.Group("/api/v1/users")
-	router.GET(relativePath:"/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+	router := gin.Default()
+	router.GET("/getMessages", getMessages)
+	router.POST("/addMessage", addMessages)
+	// user := router.Group("/api/v1/users")
+	// router.GET(relativePath:"/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	router.Run("localhost:8080")
-	if err != nil {
-		log.Fatal(err)
-	}
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
 
 }
 
