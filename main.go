@@ -5,8 +5,10 @@ import (
 
 	_ "github.com/JakkamAshok/Doc-Api"
 	"github.com/gin-gonic/gin"
-	swaggerFiles "github.com/swaggo/files"
-	ginSwagger "github.com/swaggo/gin-swagger"
+	"github.com/swaggo/files"
+	"github.com/swaggo/gin-swagger"
+	// swaggerFiles "github.com/swaggo/files"
+	// ginSwagger "github.com/swaggo/gin-swagger"
 
 	_ "github.com/JakkamAshok/Doc-Api"
 	// swaggerFiles "github.com/swaggo/files"
