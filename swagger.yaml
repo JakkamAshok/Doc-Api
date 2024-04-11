@@ -1,0 +1,13 @@
+info:
+  contact:
+    name: API Support
+    url: https://www.example.com/support
+  description: This is a sample API documentation
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  termsOfService: https://example.com/terms/
+  title: Your API Title
+  version: "1.0"
+paths: {}
+swagger: "2.0"

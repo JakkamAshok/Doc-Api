@@ -1,0 +1,18 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a sample API documentation",
+        "title": "Your API Title",
+        "termsOfService": "https://example.com/terms/",
+        "contact": {
+            "name": "API Support",
+            "url": "https://www.example.com/support"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        },
+        "version": "1.0"
+    },
+    "paths": {}
+}
